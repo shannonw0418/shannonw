@@ -1,236 +1,181 @@
-*:focus{
-    outline: none;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-html {
-    background: #f2f2f2;
-}
+
 body {
-    margin: 0;
-    font-family: "Raleway",sans-serif;
+  font-family: 'Roboto Slab', serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
-h1 {
-    margin: 0;
-    font-size: 33px;
-    color: #fff;
-    padding: 0 10%;
+
+.heading {
+  background: white;
+  height: 5%;
+  margin: 10px;
+  padding: 10px;
 }
-h3 {
-    margin: 0;
-    font-size: 17px;
-    font-weight: 500;
-    color: #ccc;
-    padding: 0 10%;
+
+.swiper-container {
+  width: 100%;
+  height: 90%;
 }
-.container {
-    display: block;
-    width: 100%;
-    height: 750px;
-    margin: auto;
-    overflow: hidden;
-    background-image: url("https://www.grandvincent-marion.fr/_codepen/bg-music-player.jpg");
-    background-repeat: repeat;
-    background-size: cover;
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.music-player {
-    display: block;
-    position: relative;
-    width: 400px;
-    height: 570px;
-    margin: auto;
-    margin-top: 6%;
-    border-radius: 0 0 10px 10px;
-    background: transparent linear-gradient(to bottom,rgba(10,11,31,0.9) 50%,rgb(10,11,31) 70%) repeat scroll 0 0;
-    box-shadow: 1px 10px 20px 5px #222;
+
+.container-general {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 800px;
 }
-.cover {
-    float: left;
-    width: 100%;
-    height: 66%;
+.container-general .gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
 }
-.cover img {
-    display: block;
-    position: absolute;
-    top: 8%;
-    left: 14%;
-    width: 70%;
-    margin: auto;
-    text-align: center;
+.container-general .gallery-wrap .item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.8s ease;
 }
-.titre {
-    float: left;
-    width: 100%;
+.container-general .gallery-wrap .item:hover {
+  flex: 7;
 }
-.lecteur {
-    width: 100%;
-    display: block;
-    height: auto;
-    position: relative;
-    float: left;
+
+.wrap-effect-1 .item:first-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4185141/galshir-cactus-coffee.png");
 }
-.mejs__button>button:focus {
-    outline: 0px dotted #999;
+.wrap-effect-1 .item:nth-of-type(2) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/6146136/galshir-tea-biscuit_2x.png");
 }
-.mejs__container {
-    position: relative;
-    background-color: transparent;
-    min-width: auto !important;
+.wrap-effect-1 .item:nth-of-type(3) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4473482/galshir-dog-walker.gif");
 }
-.mejs__controls {
-    padding: 0 10%;
-    background: transparent !important;
-    display: block;
-    position: relative;
+.wrap-effect-1 .item:nth-of-type(4) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5743606/gal-shir-scooter_2x.png");
 }
-.mejs__controls div {
-    display: block;
-    float: left;
-    position: relative;
+.wrap-effect-1 .item:last-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4738104/galshir-storytime.png");
 }
-.mejs__controls .mejs__playpause-button {
-    position: absolute !important;
-    right: 8%;
-    bottom: 95%;
-    width: 40px;
+
+.wrap-effect-2 .item:hover {
+  transform: translate3d(0, 0, 100px);
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  filter: saturate(2) contrast(120%);
 }
-.mejs__controls .mejs__playpause-button button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 23px;
-    color: #5bbb95;
-    background: transparent;
-    padding: 0;
-    margin: 0;
+.wrap-effect-2 .item:first-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4854597/galshir-umbrella.jpg");
 }
-.mejs__controls .mejs__play button:before{
-    content:"\f04b";
+.wrap-effect-2 .item:nth-of-type(2) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4776189/galshir-genesis.png");
 }
-.mejs__controls .mejs__pause button:before{
-    content:"\f04c";
+.wrap-effect-2 .item:nth-of-type(3) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5329211/galshir-walking.gif");
 }
-.mejs__controls .mejs__volume-button button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 20px;
-    color: #5bbb95;
-    background: transparent;
-    margin: 0;
-    padding: 0;
+.wrap-effect-2 .item:nth-of-type(4) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4611698/galshir-paper-boat.png");
 }
-.mejs__controls .mejs__mute button:before {
-    content: "\f028";
+.wrap-effect-2 .item:last-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4544774/galshir-window.png");
 }
-.mejs__controls .mejs__unmute button:before {
-    content: "\f026";
+
+.wrap-effect-3 .item:hover {
+  animation: rotate 0.7s ease-in-out both;
+  border-radius: 10px;
+  border: 1px solid gray;
 }
-.mejs__controls .mejs__time {
-    width: 100%;
-    margin-top: 7%;
-    margin-bottom: 3%;
-    color: #fff;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    min-width: 100%;
+.wrap-effect-3 .item:first-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5947483/galshir-wind_2x.png");
 }
-.mejs__controls .mejs__time span {
-    font-size: 15px;
+.wrap-effect-3 .item:nth-of-type(2) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5754705/galshir-rain_2x.png");
 }
-.mejs__controls span.mejs__duration {
-    float: right;
-    text-align: right;
-    color: #ccc;
+.wrap-effect-3 .item:nth-of-type(3) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5355160/galshir-attack.gif");
 }
-.mejs__controls span.mejs__currenttime {
-    font-weight: 700;
-    float: left;
+.wrap-effect-3 .item:nth-of-type(4) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4742049/galshir-samurai.png");
 }
-.mejs__controls .mejs__time-rail {
-    width: 100%;
-    margin: 0;
+.wrap-effect-3 .item:last-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5594777/galshir-winter-cycling_2x.jpg");
 }
-.mejs__controls .mejs__time-rail span {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 50px;
-    cursor: pointer;
+
+.wrap-effect-4 .item:hover {
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  filter: saturate(2) contrast(120%);
 }
-.mejs__controls .mejs__time-rail .mejs__time-loaded {
-    background: rgba(255,255,255,0.2);
+.wrap-effect-4 .item:first-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4226693/galshir-iphone-x-lemonade.gif");
 }
-.mejs__controls .mejs__time-rail .mejs__time-float {
-    display: none;
-    top: -40px;
-    width: 40px;
-    height: 25px;
-    margin-left: 0px;
-    text-align: center;
-    font-size: 10px;
-    background: #fff;
-    border: 0;
+.wrap-effect-4 .item:nth-of-type(2) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4475663/galshir-musical-instruments.gif");
 }
-.mejs__controls .mejs__time-rail .mejs__time-float-current {
-    display: block;
-    position: relative;
-    top: 0;
-    margin: 0;
-    line-height: 26px;
-    color: #100d28;
+.wrap-effect-4 .item:nth-of-type(3) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/5431797/galshir-lemonade-ring.gif");
 }
-.mejs__controls .mejs__time-rail .mejs__time-float-corner {
-    top: auto;
-    bottom: -9px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-top: 6px solid #fff;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+.wrap-effect-4 .item:nth-of-type(4) {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4419736/galshir-lemonade-bike.gif");
 }
-.mejs__controls .mejs__time-rail .mejs__time-current {
-    background: #5BBB95 none repeat scroll 0 0;
+.wrap-effect-4 .item:last-of-type {
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4281500/galshir-lemonade-camera.gif");
 }
-.mejs__controls .mejs__time-handle {
-    display: none;
+
+.inspire {
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
 }
-.mejs__controls .mejs__volume-button {
-    position: relative;
-    position: absolute !important;
-    top: 70px;
-    right: 25%;
-    width: 40px;
-    height: 40px;
+.inspire:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
 }
-.mejs__controls .mejs__horizontal-volume-slider {
-    display: block;
-    position: absolute !important;
-    position: relative;
-    top: 70px;
-    right: 10%;
-    width: 60px;
-    height: 4px;
-    margin-top: 18px;
-    border-radius: 50px;
-    line-height: 11px;
+.inspire:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total,
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.1);
-}
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    background: #fff;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
 }
